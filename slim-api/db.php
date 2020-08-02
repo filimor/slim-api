@@ -23,7 +23,7 @@ $schema->create($productsTable, function($table){
     $table->text('description');
     $table->decimal('price', 11, 2);
     $table->string('manufacturer', 60);
-    $table->date('created_at');
+    $table->timestamps();
 });
 
 $db->table($productsTable)->insert([
@@ -32,7 +32,7 @@ $db->table($productsTable)->insert([
     'price' => 899.00,
     'manufacturer' => 'Motorola',
     'created_at' => '2019-10-22',
-    //'updated_at' => '2019-10-22'
+    'updated_at' => '2019-10-22'
 ]);
 
 $db->table($productsTable)->insert([
@@ -41,5 +41,5 @@ $db->table($productsTable)->insert([
     'price' => 4999.00,
     'manufacturer' => 'Apple',
     'created_at' => '2020-10-01',
-    //'updated_at' => '2020-10-01'
+    'updated_at' => '2020-10-01'
 ]);
